@@ -19,6 +19,9 @@ const Index: NextPage = () => {
                 <Link href={"/serverside/home/"}>
                     <div className={css.jump}>Server-Side</div>
                 </Link>
+                <Link href={"/staticsite/home/"}>
+                    <div className={css.jump}>Static Site</div>
+                </Link>
             </div>
         </>
     );

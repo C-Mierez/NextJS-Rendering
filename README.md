@@ -13,3 +13,8 @@ In this first example, `ClientSideHome` and `ClientSideDetails` are using CSR:
 ### 2 - SSR - Server-Side Rendering
 
 In the second example, `ServerSideHome` is using the `getServerSideProps` function to fetch the data **BEFORE** building the page. The data is fetched, the component is rendered and then that is what's returned to the client.
+
+Same applies to `ServerSideDetails`.
+
+### 3 - SSG - Static Site Generation
+

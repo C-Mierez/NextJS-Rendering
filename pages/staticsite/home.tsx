@@ -1,14 +1,10 @@
-import type {
-    GetServerSideProps,
-    InferGetServerSidePropsType,
-    NextPage,
-} from "next";
+import type { GetStaticProps, InferGetStaticPropsType, NextPage } from "next";
 import Head from "next/head";
 import PreviewCard from "../../components/PreviewCard";
 import { constants } from "../../public/constants";
 import css from "../../styles/Home.module.css";
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
+export const getStaticProps: GetStaticProps = async (context) => {
     const resp = await fetch(constants.API.index);
 
     return {
@@ -18,9 +14,9 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     };
 };
 
-const ServerSideHome: NextPage = ({
+const StaticSiteHome: NextPage = ({
     pokemon,
-}: InferGetServerSidePropsType<typeof getServerSideProps>) => {
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
     return (
         <>
             <Head>
@@ -32,7 +28,7 @@ const ServerSideHome: NextPage = ({
                         <PreviewCard
                             key={index}
                             pokemon={pokemon}
-                            detailsUrl={`/serverside/${pokemon["id"]}`}
+                            detailsUrl={`/staticsite/${pokemon["id"]}`}
                         />
                     );
                 })}
@@ -41,4 +37,4 @@ const ServerSideHome: NextPage = ({
     );
 };
 
-export default ServerSideHome;
+export default StaticSiteHome;

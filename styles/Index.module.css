@@ -1,8 +1,10 @@
 .main {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    gap: 1rem;
+
+    padding: 0 2rem;
 }
 
 .jump {
@@ -10,7 +12,7 @@
     background-color: hsla(0, 0%, 100%, 0.08);
 
     aspect-ratio: 1;
-    width: 25%;
+    width: 35%;
 
     border-radius: 1rem;
 
@@ -31,4 +33,19 @@
     background-color: hsla(0, 0%, 100%, 0.1);
 
     font-size: 1.8em;
+}
+
+@media (min-width: 768px) {
+    .main {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 768px) {
+    .jump {
+        width: 100%;
+        aspect-ratio: unset;
+    }
 }

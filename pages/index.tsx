@@ -16,7 +16,7 @@ const Index: NextPage = () => {
                 <Link href={"/clientside/home/"}>
                     <div className={css.jump}>Client-Side</div>
                 </Link>
-                <Link href={"/clientside/home/"}>
+                <Link href={"/serverside/home/"}>
                     <div className={css.jump}>Server-Side</div>
                 </Link>
             </div>

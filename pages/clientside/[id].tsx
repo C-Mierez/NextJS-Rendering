@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import constants from "../../public/constants";
 import css from "../../styles/Details.module.css";
 
-// The page is being Server-Side Rendered by NextJS
 export default function ClientSideDetails() {
     const { query } = useRouter();
     const [pokemonDetails, setPokemonDetails] = useState(null);

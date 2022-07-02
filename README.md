@@ -18,3 +18,11 @@ Same applies to `ServerSideDetails`.
 
 ### 3 - SSG - Static Site Generation
 
+With this approach, the pages are generated at **build** time, and stored for easy serverless access.
+
+The catch here is that the data is not gonna be updated (by default) since the endpoint from which it was fetched is only accessed at build time, and never again.
+
+However, there are ways to update SSG pages:
+- Using NextJS's `revalidate` property on the page's `getStaticProps` return object. This will update the page after the set time has passed.
+
+- Adding / Using an API endpoint from which to force a revalidation with the `NextApiResponse.revalidate()` method.

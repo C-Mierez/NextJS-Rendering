@@ -24,6 +24,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
         props: {
             pokemonDetails: await resp.json(),
         },
+        revalidate: 30,
     };
 };
 
